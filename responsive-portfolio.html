@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+    
+  </head>
+
+  <body>
+    <div
+      style="
+        background-color: #10b981;
+        position: fixed;
+        z-index: 99999;
+        margin: 5% 0%;
+        padding: 3px;
+        border-radius: 0 50% 50% 0;
+        transition: 0.5s;
+      "
+    >
+      <img
+        id="bgc"
+        src="./img/logo/moon.png"
+        height="30px"
+        width="30px"
+        style="
+          cursor: pointer;
+          border-radius: 50%;
+          border: 0.5px solid;
+          padding: 5px;
+        "
+      />
+    </div>
+
+    <div id="menu">
+      <ul id="navbar-li">
+        <li title="about" onclick="load2(0,1,2,3,4,5,6)">
+          <img class="navImg" src="./img/logo/about.png" alt="" />
+          <p class="pt">About</p>
+        </li>
+        <li title="portfolio" onclick="load1(1,0,2,3,4,5,6)">
+          <img class="navImg" src="./img/logo/skills.png" alt="" />
+          <p class="pt">portfolio</p>
+        </li>
+        <li title="resume" onclick="load1(2,1,0,3,4,5,6)">
+          <img class="navImg" src="./img/logo/resume.png" alt="" />
+          <p class="pt">Resume</p>
+        </li>
+        <li title="product" onclick="load1(3,1,2,0,4,5,6)">
+          <img class="navImg" src="./img/logo/portfolio.png" alt="" />
+          <p class="pt">Product</p>
+        </li>
+        <li title="service & price" onclick="load1(4,1,2,3,0,5,6)">
+          <img class="navImg" src="./img/logo/price.png" alt="" />
+          <p class="pt">service</p>
+        </li>
+        <li title="blog & vlog" onclick="load1(5,1,2,3,4,0,6)">
+          <img class="navImg" src="./img/logo/blog.png" alt="" />
+          <p class="pt">blog</p>
+        </li>
+        <li title="contact" onclick="load1(6,1,2,3,4,5,0)">
+          <img class="navImg" src="./img/logo/contact.png" alt="" />
+          <p class="pt">Contact</p>
+        </li>
+      </ul>
+      <button id="nv-switch">hire me</button>
+    </div>
+
+    <div id="port">
+      <main id="port-body">
+        <div id="head">
+          <div id="name">
+            <p id="who">hi, i am a freelancer</p>
+
+            <div class="typing-container">
+              <div class="text-box">
+                <span id="text"></span>
+              </div>
+            </div>
+            <div class="summery">
+              <p id="sum-P">
+                I am a developer. I develop website , apps both frontend and
+                backend. <br />
+                lets see my
+                <span onclick="load1(1,0,2,3,4,5,6)">portfolio</span>,
+                <span onclick="load1(3,1,2,0,4,5,6)">product</span> and other
+                information.
+              </p>
+            </div>
+            <div id="button1">
+              <button onclick="load1(3,1,2,0,4,5,6)" class="goAny">
+                <img src="./img/logo/portfolio.png" alt="" />view portfolio
+              </button>
+              <button onclick="load1(2,1,0,3,4,5,6)" class="goAny">
+                <img src="./img/logo/resume.png" alt="" /> view resume
+              </button>
+            </div>
+          </div>
+          <div id="logo">
+            <img id="myPic" src="./img/football/mahdee.jpg" alt="photo" />
+            <div class="myPicB"></div>
+          </div>
+          <div class="counter">
+            <div>
+              <p id="workC">0</p>
+              <h5>
+                years work <br />
+                experience;
+              </h5>
+            </div>
+            <div>
+              <p id="projectC">0</p>
+              <h5>
+                projects <br />
+                completed;
+              </h5>
+            </div>
+            <div>
+              <p id="clientC">0</p>
+              <h5>
+                client <br />
+                worldwide;
+              </h5>
+            </div>
+          </div>
+
+          <div class="hire">
+            <div id="hire-text">
+              <h1>lets work together on your next project</h1>
+              <p>
+                i am currently available to create <br />
+                any project such as web developing and designing.
+              </p>
+            </div>
+            <button class="hire-me" onclick="load1(6,1,2,3,4,5,0)">
+              hire me
+            </button>
+          </div>
+          <div id="work">
+            <h1>languages i learnt:</h1>
+
+            <div id="card-container"></div>
+<!--        
+            <div class="card">
+              <img src="./img/logo/html.png" alt="" />
+              <h4>html</h4>
+              <p>
+                HTML (HyperText Markup Language) is the core language for
+                creating web pages. It defines the structure of a webpage using
+                tags like h1, img, and a. HTML organizes content, enabling
+                browsers to display text, images, and links. It's essential for
+                web development, paired with CSS and JavaScript for design and
+                interactivity.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./img/logo/css.svg" alt="" />
+              <h4>css</h4>
+              <p>
+                CSS (Cascading Style Sheets) is a stylesheet language used to
+                describe the presentation of a web page written in HTML. It
+                controls the layout, colors, fonts, spacing, and overall visual
+                appearance of a site. CSS allows for the separation of content
+                from design, enabling consistent and responsive styling across
+                multiple pages.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./img/logo/js.svg" alt="" />
+              <h4>javascript</h4>
+              <p>
+                JavaScript is a high-level, dynamic programming language widely
+                used for creating interactive and dynamic content on websites.
+                It enables developers to manipulate HTML and CSS, handle user
+                events, and perform asynchronous tasks. As a core technology of
+                the web, JavaScript is essential for building modern web
+                applications and enhancing user experiences.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./img/logo/react.svg" alt="" />
+              <h4>react</h4>
+              <p>
+                React is a popular JavaScript library for building user
+                interfaces, particularly single-page applications. It uses a
+                component-based architecture, allowing developers to create
+                reusable UI elements. React's virtual DOM efficiently updates
+                only the necessary parts of the page, improving performance and
+                enabling dynamic, interactive user experiences in web
+                applications.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./img/logo/bootstrap.png" alt="" />
+              <h4>bootstrap</h4>
+              <p>
+                Bootstrap is an open-source front-end framework used to create
+                responsive, mobile-first websites. It offers pre-designed CSS
+                and JavaScript components like grids, buttons, and navigation
+                bars, simplifying web design. With its responsive grid system,
+                Bootstrap ensures layouts adapt to various screen sizes,
+                speeding up the development process.
+              </p>
+            </div>
+            <div class="card">
+              <img src="./img/logo/c++.svg" alt="" />
+              <h4>c++</h4>
+              <p>
+                C++ is a powerful, general-purpose programming language that
+                extends C by adding object-oriented features. It’s widely used
+                for system software, game development, and performance-critical
+                applications. C++ supports both high- and low-level programming,
+                offering features like classes, inheritance, and polymorphism,
+                enabling efficient code management and scalability.
+              </p>
+            </div> -->
+          </div>
+
+          <div id="contact">
+            <p>contact with me</p>
+            <a href=""> <img src="./img/logo/fb.png" alt="" /></a>
+            <a href=""> <img src="./img/logo/google.png" alt="" /></a>
+            <a href=""> <img src="./img/logo/twitter.png" alt="" /></a>
+            <a href=""><img src="./img/logo/insta.png" alt="" /></a>
+            <a href=""><img src="./img/logo/whatsapp.png" alt="" /></a>
+          </div>
+        </div>
+        <hr class="lastline" />
+
+        <div id="portfolio">
+          <div id="folio-head">
+            <br />
+            <br />
+            <br /><br />
+            <p>
+              in successful years career i have such a big collection of better
+              project. lets take a look in-
+            </p>
+            <h1>some of my project</h1>
+            <br /><br /><button class="hire-me" onclick="load1(6,1,2,3,4,5,0)">
+              hire me</button
+            ><br />
+            <br />
+            <ul id="folio-li">
+              <li onclick="load3(0,1,2,3,4)">all</li>
+              <li onclick="load3(1,0,2,3,4)">web app</li>
+              <li onclick="load3(2,1,0,3,4)">mobile app</li>
+              <li onclick="load3(3,1,2,0,4)">frontend</li>
+              <li onclick="load3(4,1,2,3,0)">backend</li>
+            </ul>
+          </div>
+          <div id="folio-body">
+            <div style="display: flex; justify-content: center">
+              <h1>all of my project is here</h1>
+            </div>
+
+            <div id="folio-part1">
+              <div style="width: 100%; display: flex; justify-content: center">
+                <h3>web app</h3>
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" /><a href=""
+                  ><b>restaurant website</b></a
+                >
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/web.jpg" height="80%" width="100%" />
+              </div>
+            </div>
+            <div id="folio-part2">
+              <div style="width: 100%; display: flex; justify-content: center">
+                <h3>mobile app</h3>
+              </div>
+
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/app.jpg" height="80%" width="100%" />
+              </div>
+            </div>
+            <div id="folio-part3">
+              <div style="width: 100%; display: flex; justify-content: center">
+                <h3>frontend</h3>
+              </div>
+
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/front.jpg" height="80%" width="100%" />
+              </div>
+            </div>
+            <div id="folio-part4">
+              <div style="width: 100%; display: flex; justify-content: center">
+                <h3>backend</h3>
+              </div>
+
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+              <div class="card">
+                <img src="./img/logo/back.jpg" height="80%" width="100%" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr class="lastline" />
+        <div class="rusume-start" style="flex-direction: column">
+          <br /><br /><br /><br />
+          <center>
+            <h1 style="font-size: 2rem">online resume</h1>
+          </center>
+          <br />
+          <center><button class="hire-me">download pdf version</button></center>
+          <br /><br /><br />
+          <div id="resume">
+            <div id="resume-header">
+              <div>
+                <h1>MD: MAHDEE HASAN</h1>
+                <p>web developer</p>
+              </div>
+              <div id="resume-contact">
+                <a href=""
+                  ><img src="./img/logo/mail.png" alt="" /> mail:
+                  mahdeeh45@gmail.com</a
+                >
+                <a href=""
+                  ><img src="./img/logo/facebook.svg" alt="" /> facebook: mah dee</a
+                >
+                <a href=""
+                  ><img src="./img/logo/whatsapp1.png" alt="" /> whatsapp:+88
+                  01862402594</a
+                >
+                <a href=""
+                  ><img src="./img/logo/call.png" alt="" /> cellphone: 01333092307</a
+                >
+                <a href=""
+                  ><img
+                    src="./img/logo/location.png"
+                    alt=""
+                  />location:mymenshing,bangladesh</a
+                >
+              </div>
+            </div>
+            <hr style="width: 100%" />
+            <div id="resume-body">
+              <div id="resume-summery">
+                <img id="resume-pic" src="./img/football/mahdee.jpg" />
+                <p>
+                  i am very casual programmer as well. my programming career is
+                  not that interesting but i can do anything possible with my
+                  programming skills. i started programming at the age of 19 in
+                  2024. since then i created so many website.after all, i can
+                  create that what you will really like.
+                </p>
+              </div>
+
+              <div class="section">
+                <h2 style="display: flex; align-items: center">
+                  <img
+                    src="./img/logo/skill.png"
+                    alt=""
+                    height="25px"
+                    width="25px"
+                    style="margin-right: 5px"
+                  />skills
+                </h2>
+
+                <br />
+                <ul>
+                  <li>
+                    <strong
+                      ><img
+                        class="skPic"
+                        ;
+                        src="./img/logo/settings.png"
+                        alt=""
+                        height="17px"
+                        width="17px"
+                        style="margin-right: 5px; transform: translateY(2px)"
+                      />
+                      <h3 style="display: inline">Technical Skills:</h3>
+                    </strong>
+
+                    <ul>
+                      <li>perfect web developer developing skills</li>
+                      <li>web designing</li>
+                      <li>
+                        programming languages:
+
+                        <div id="skill-card">
+                          <ul id="skills-ul">
+                            <li id="ht">HTML</li>
+                            <li id="css">CSS</li>
+                            <li id="js">JS</li>
+                            <li id="react">REACT</li>
+                            <li id="boot">BOOTSTRAP</li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong
+                      ><img
+                        class="skPic"
+                        ;
+                        src="./img/logo/settings.png"
+                        alt=""
+                        height="17px"
+                        width="17px"
+                        style="margin-right: 5px; transform: translateY(2px)"
+                      />
+                      <h3 style="display: inline">soft Skills:</h3>
+                    </strong>
+                    <ul>
+                      <li>speaker</li>
+                      <li>best player</li>
+                      <li>teamwork expart</li>
+                      <li>religious person</li>
+                      <li>great student</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong
+                      ><img
+                        src="./img/logo/language.svg"
+                        alt=""
+                        height="17px"
+                        width="17px"
+                        style="
+                          margin-right: 5px;
+                          transform: translateY(2px);
+                          fill: rgb(201, 196, 196);
+                        "
+                      />
+                      <h3 style="display: inline">languages:</h3>
+                    </strong>
+                    <ul>
+                      <li><b> native: </b> bengali</li>
+                      <li><b>professional:</b> english</li>
+                      <li><b>others:</b> arabic,hindi/urdu</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="section">
+                <h2 style="display: flex; align-items: center">
+                  <img
+                    src="./img/logo/exp.png"
+                    alt=""
+                    height="25px"
+                    width="25px"
+                    style="margin-right: 5px"
+                  />work experience
+                </h2>
+
+                <h3 class="job1">
+                  <img
+                    class="skPic"
+                    ;
+                    src="./img/logo/job.png"
+                    alt=""
+                    height="17px"
+                    width="17px"
+                    style="margin-right: 5px; transform: translateY(2px)"
+                  />well-known freelancer
+                </h3>
+                <br />
+                <ul>
+                  <li>as a Beginner, i nearly satisfy me in just one month.</li>
+                  <li>
+                    in this career i found my success and i haven't look behind
+                    after joining. i prefer all those unemployed, to be a
+                    programmer.
+                  </li>
+                </ul>
+
+                <h3 class="job2">
+                  <img
+                    class="skPic"
+                    ;
+                    src="./img/logo/job.png"
+                    alt=""
+                    height="17px"
+                    width="17px"
+                    style="margin-right: 5px; transform: translateY(2px)"
+                  />principal
+                </h3>
+                <br />
+                <p>
+                  hazrat ali (ra) noorani kinder guarten | [gaibandha, rangpur]
+                </p>
+
+                <ul>
+                  <li>
+                    i got so many respects and peaceful awards in the only
+                    years.
+                  </li>
+                  <li>
+                    through it was my first profession , i learnt so many things
+                    as well. communication style , attitude of others,
+                    man-marking are some of them. i started as a assistant
+                    teacher but soon i promoted to principal. so, that was like
+                    an awards to me.
+                  </li>
+                </ul>
+              </div>
+              <div class="section">
+                <h2 style="display: flex; align-items: center">
+                  <img
+                    src="./img/logo/edu.png"
+                    alt=""
+                    height="25px"
+                    width="25px"
+                    style="margin-right: 5px"
+                  />Education
+                </h2>
+                <br />
+                <br />
+                <p>
+                  <b
+                    ><img src="./img/logo/edu1.png" class="skPic" ; alt="" /> boyra
+                    para govt. primary school</b
+                  >
+                  <br />
+                  [2010-2015] [ P S C , result : 5.00]
+                </p>
+                <br />
+                <p>
+                  <b
+                    ><img src="./img/logo/edu1.png" class="skPic" ; alt="" />
+                    chithulia digar muhiyus sunnah alim madrasha</b
+                  ><br />
+                  [2016-2018] [J D C , result : 4.72]
+                </p>
+                <br />
+                <p>
+                  <b
+                    ><img src="./img/logo/edu1.png" class="skPic" ; alt="" />
+                    chithulia digar muhiyus sunnah alim madrasha</b
+                  ><br />
+                  [2019-2020] [ dakhil , result : 5.00]
+                </p>
+                <br />
+                <p>
+                  <b
+                    ><img src="./img/logo/edu1.png" class="skPic" ; alt="" />
+                    ta'mirul millat kamil madrasha</b
+                  ><br />
+                  [2022-2023] [ alim , result : 5.00]
+                </p>
+                <br />
+                <p>
+                  <b
+                    ><img src="./img/logo/edu1.png" class="skPic" ; alt="" /> boyra
+                    para bage jannat nurani hafijiya madrasha</b
+                  ><br />
+                  [2016-2018] [ hifjul quran]
+                </p>
+              </div>
+
+              <div class="section">
+                <h2 style="display: flex; align-items: center">
+                  <img
+                    src="./img/logo/favorite.png"
+                    alt=""
+                    height="25px"
+                    width="25px"
+                    style="margin-right: 5px"
+                  />interest
+                </h2>
+                <br />
+                <ul>
+                  <li>
+                    <div>
+                      <h3>
+                        <img
+                          class="skPic"
+                          ;
+                          src="./img/logo/ball.png"
+                          alt=""
+                          height="17px"
+                          width="17px"
+                          style="margin-right: 5px; transform: translateY(2px)"
+                        />
+                        my favorite sports:
+                      </h3>
+                      <br />
+                      <h4><b>./img/football</b></h4>
+                      <p>
+                        i love ./img/football so much . <br />
+                        so i didn't miss any match played in our village. <br />
+                        usually my position is left-wing. <br />
+                        but sometimes i play as a forward and mid fielder also.
+                      </p>
+                      <br />
+                      <p><b>cricket</b></p>
+                      <p>
+                        i love cricket also . <br />
+                        so i didn't miss any match played in our village. <br />
+                        usually i like to bat <br />
+                        but sometimes i used to bowl. <br />
+                        although i am on of the most well-known fielder.
+                      </p>
+                      <br />
+                      <p><b>others</b></p>
+                      <p>i also like any other games. some of its are</p>
+                      <ul>
+                        <li>badminton</li>
+                        <li>volleyball</li>
+                        <li>local games</li>
+                        <li>video games</li>
+                      </ul>
+                      <br />
+                    </div>
+                  </li>
+                  <li>
+                    <h4>* creating social content:</h4>
+                    in my free time i like to create social content and
+                    entertain people.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="resume-footer">
+              <div class="comment">
+                <h4>write something about me:</h4>
+                <br />
+                <form action="">
+                  <div>
+                    enter your name: <br />
+                    <input type="text" id="nameOf" />
+                  </div>
+                  <div>
+                    write your comment: <br />
+                    <textarea name="" id="comment-box"></textarea>
+                  </div>
+
+                  <input id="submit" type="submit" value="comment" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="lastline" />
+        <div id="product">
+          <div id="product-summery">
+            <p align="center">
+              are you looking for an amazing template collection and want to use
+              it on easy cost , my template product here for you. you can easily
+              buy any of this for your project. let's take a look what i created
+              for you .
+            </p>
+            <p>well , if you need any help, you can told me .</p>
+            <button class="hire-me">contact</button>
+          </div>
+          <hr />
+          <div id="product-main">
+            <ul>
+              <li onclick="load5(0,1,2)">all</li>
+              <li onclick="load5(1,0,2)">frontend</li>
+              <li onclick="load5(2,1,0)">backend</li>
+            </ul>
+            <div id="produts">
+              <div class="part"><h1>all template</h1></div>
+              <div class="part">
+                <h3>frontend template</h3>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="part">
+                <h3>backend template</h3>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-pic">
+                    <img src="./img/logo/app.jpg" alt="" />
+                  </div>
+                  <div class="product-details">
+                    <p>
+                      <b><u> name:</u></b> responsive design
+                    </p>
+                    <p align="center">
+                      <b><u>details:</u></b> this product is used for the
+                      responsive web designing . you can use it personally too.
+                    </p>
+                    <p><strong>price: $15</strong></p>
+
+                    <button class="buy">add to cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="lastline" />
+
+        <div id="service">
+          <div id="service-summery" style="margin: 70px 20px 20px 20px">
+            <p align="center">
+              i have the experience to code your design. i understand all of my
+              customers need and feed them as well. you can see my
+              <span onclick="load1(1,0,2,3,4,5,6)">portfolio</span>&<span
+                onclick="load1(2,0,1,3,4,5,6)"
+                >resume</span
+              >
+              for details. let's see how much i cost for your work. <br />
+              <button class="hire-me">hire me</button>
+            </p>
+          </div>
+          <hr />
+          <div id="service-main">
+            <h1
+              style="
+                width: 100%;
+                border-left: #10b981 2px solid;
+                padding-left: 10px;
+                margin: 20px 10px;
+                background-color: #10b98117;
+              "
+            >
+              service and prices:
+            </h1>
+            <div class="price-card">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <p>basic</p>
+                <h1>$900</h1>
+                <p>per month</p>
+              </div>
+              <p></p>
+              <hr width="80%" />
+              <ul>
+                <li>web development</li>
+                <li>UI/UX Design</li>
+                <li>Webflow Development</li>
+                <li>24/7 Support</li>
+                <li>Website Optimization</li>
+              </ul>
+              <button class="hire-me">choose basic</button>
+            </div>
+            <div class="price-card">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <p>advanced</p>
+                <h1>$2500</h1>
+                <p>per month</p>
+              </div>
+              <p class="most">most popular</p>
+              <hr width="80%" />
+              <ul>
+                <li>web development</li>
+                <li>UI/UX Design</li>
+                <li>Webflow Development</li>
+                <li>24/7 Support</li>
+                <li>Website Optimization</li>
+              </ul>
+              <button class="hire-me">choose advanced</button>
+            </div>
+            <div class="price-card">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <p>premium</p>
+                <h1>$5000</h1>
+                <p>per month</p>
+              </div>
+              <p></p>
+              <hr width="80%" />
+              <ul>
+                <li>web development</li>
+                <li>UI/UX Design</li>
+                <li>Webflow Development</li>
+                <li>24/7 Support</li>
+                <li>Website Optimization</li>
+              </ul>
+              <button class="hire-me">choose premium</button>
+            </div>
+          </div>
+          <div id="service-footer">
+            <h1>want to hire me for a certain while:</h1>
+            <p>
+              well, you can hire me for a certain moment for your programmes. if
+              want so , then you can contact me for your choice.
+            </p>
+            <button class="hire-me">contact me</button>
+          </div>
+        </div>
+        <hr class="lastline" />
+        <div id="blog">
+          <div id="blog-summery">
+            <p align="center">
+              a simple way to explore programme related question and learning
+              languages is my blog. you can easily learn everything about
+              programming from my blog. on the other hand, i have a vlog channel
+              that really can entertain you. lets take a look what i presenting
+              to the world.
+            </p>
+            <br />
+            <div>
+              <button class="hire-me">view my website</button>
+              <button class="hire-me">view my youtube channel</button>
+            </div>
+          </div>
+          <hr />
+          <br /><br />
+          <div id="blog-main">
+            <h1 class="hire-me">blogs</h1>
+            <ul>
+              <li onclick="load4(0,1,2)">all</li>
+              <li onclick="load4(1,0,2)">e-learning</li>
+              <li onclick="load4(2,1,0)">entertainment</li>
+            </ul>
+            <div id="blog-part1">
+              <h1>all of my blog is here</h1>
+            </div>
+            <div id="blog-part2">
+              <h3>e-learning</h3>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+            </div>
+            <div id="blog-part3">
+              <h3>entertainment</h3>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+              <div class="card"></div>
+            </div>
+          </div>
+        </div>
+        <hr class="lastline" />
+        <div id="contact1">
+          <div id="contact-short">
+            <p>you can contact with me from the start of the day to midnight</p>
+            <div id="short-contactP">
+              <img src="./img/logo/mail.png" alt="" /><img
+                src="./img/logo/call.png"
+                alt=""
+              />
+              <img src="./img/logo/facebook.svg" alt="" /><img
+                src="./img/logo/whatsapp1.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="contact-main">
+            <h1 style="width: 100%; text-align: center">contact details</h1>
+            <div id="cellphone">
+              <img src="./img/logo/call.png" alt="" />
+              <h1>+880 1988-253341</h1>
+            </div>
+            <div id="whatsapp">
+              <img src="./img/logo/whatsapp1.png" alt="" />
+              <h1>+880 1862-402594</h1>
+            </div>
+            <div id="facebook">
+              <img src="./img/logo/facebook.svg" alt="" />
+              <h1>mah dee</h1>
+            </div>
+
+            <div id="email">
+              <img src="./img/logo/mail.png" alt="" />
+              <h1>mahdeeh45@gmail.com</h1>
+            </div>
+            <div
+              id="location"
+              style="
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+              "
+            >
+              <div
+                style="
+                  width: 100%;
+                  height: 100px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-wrap: wrap;
+                "
+              >
+                <img
+                  height="60px"
+                  width="60px"
+                  src="./img/logo/location.png"
+                  alt=""
+                />
+                <h1>location:</h1>
+                <br />
+              </div>
+
+              <div id="map" style="width: 100%">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28945.194577932074!2d89.9478771!3d24.926982549999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fd7f432d79ab59%3A0xba4e9a6ed6f6682c!2sJamalpur!5e0!3m2!1sen!2sbd!4v1728968265234!5m2!1sen!2sbd"
+                  width="100%"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="lastline" />
+      </main>
+      <footer>
+        <div>copyright: &copy;mahdee hasan 2024</div>
+      </footer>
+    </div>
+
+    <div id="empty2"></div>
+    <script src="./js/index.js">
+      
+    </script>
+  </body>
+</html>
